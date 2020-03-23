@@ -17,8 +17,6 @@ namespace Opgave3._7
             InitializeComponent();
         }
 
-        
-        
         private void buttonOk_Click(object sender, EventArgs e)
         {
             // Variables
@@ -26,10 +24,8 @@ namespace Opgave3._7
             string _day = _date.Substring(0, 2);
             string _month = _date.Substring(3, 2);
             string _year = _date.Substring(6, 4);
-            //string _monthText = "";
-            //string changed_date = $"{_day}-{_month}-{_year}";
 
-            switch (_month)
+            switch (_month) // Switch-case for replacing month (number) to its name
             {
                 case "01":
                     _month = "January";
@@ -71,7 +67,7 @@ namespace Opgave3._7
                     labelDate.Text = "Something went wrong!";
                     break;
             }
-            labelDate.Text = $"The date is {_day}st of {_month} {_year}";
+            labelDate.Text = $"The date is {_day}st of {_month} {_year}"; // Writes out the date with the replaced month (number -> name)
         }
     }
 }
